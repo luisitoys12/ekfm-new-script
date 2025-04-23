@@ -28,7 +28,7 @@ Before you begin, ensure you have met the following requirements:
 To run **Radio Player** locally, run this command on your git bash:
 
 ```bash
-git clone https://github.com/PeWe79/new-box-azuracast-player.git
+git clone https://github.com/luisitoys12/ekfm-new-script.git
 ```
 
 ## Configuration
@@ -40,7 +40,7 @@ Edit configuration on the bottom of `index.html` files, and find
   const settings = {
     title: "Radio Player",
     defaultartwork: "./assets/images/poster.jpg",
-    nowplayingAPI: "https:\/\/your-azuracast-server.com",
+    nowplayingAPI: "https://tuazuracast.com,
   };
   const FallbackName = settings.title;
   const apiUrl = settings.nowplayingAPI;

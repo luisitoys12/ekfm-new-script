@@ -49,8 +49,8 @@ Edit configuration on the bottom of `index.html` files, and find
 
 ### Contact
 
-If you want to contact with me you can reach me at [Github](https://www.github.com/PeWe79).
+If you want to contact with me you can reach me at [Instagram](https://instagram.com/luisalegre01).
 
 ### License
 
-This project is **free to use** and does not contains any license.
+Este proyecto es de uso libre usar por su propio riesgo recuerda regalar creditos al basarte en el codigo

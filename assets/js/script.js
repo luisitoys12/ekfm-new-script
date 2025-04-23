@@ -1,8 +1,3 @@
-"use strict";
-
-/** URL de la API de ekusfmtest */
-const apiUrl = "https://radio.estacionkusmedios.com/api/nowplaying/ekusfmtest"; // Cambia esta URL si es diferente
-
 /** Fetch API data from Azuracast server */
 function fetchData() {
   fetch(apiUrl + "/nowplaying") // Update the endpoint based on your API structure

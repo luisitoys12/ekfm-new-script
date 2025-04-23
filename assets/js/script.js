@@ -1,5 +1,43 @@
 "use strict";
 
+/** URL de la API de ekusfmtest */
+const apiUrl = "https://radio.estacionkusmedios.com/api/nowplaying/ekusfmtest"; // Cambia esta URL si es diferente
+
+/** Fetch API data from Azuracast server */
+function fetchData() {
+  fetch(apiUrl + "/nowplaying") // Update the endpoint based on your API structure
+    .then((response) => {
+      if (!response.ok) {
+        checkError("Failed to load API data", () => location.reload());
+      }
+      return response.json();
+    })
+    .then((data) => {
+      stationsData.length = 0; // Clear previous data
+      data.forEach((reslt) => {
+        stationsData.push({
+          imgBrand: reslt.now_playing.song.art || "./assets/images/default-art.jpg",
+          bgimg: reslt.now_playing.song.art || "./assets/images/default-art.jpg",
+          np: reslt.now_playing.song,
+          name: reslt.station.name,
+          streamUrl: reslt.station.listen_url,
+          api: apiUrl + "/nowplaying/" + reslt.station.shortcode,
+          played_at: reslt.now_playing.played_at,
+          history: reslt.song_history,
+        });
+      });
+      processData();
+    })
+    .catch((err) => {
+      console.error("Error fetching JSON:", err);
+    });
+}
+
+/** Other functions remain unchanged */
+fetchData(); // Llamar a la función para cargar los datos inicialmente
+
+"use strict";
+
 /** All Public Station in Azuracast information */
 const stationsData = [];
 
